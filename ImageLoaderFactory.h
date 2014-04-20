@@ -10,6 +10,7 @@
 
 namespace bgl {
 namespace io {
+namespace detail {
 
 /*
  *
@@ -23,7 +24,6 @@ class ImageLoaderFactory
 		//
 		ImageLoaderFactory(void) = delete;
 		ImageLoaderFactory(const ImageLoaderFactory&) = delete
-
 	public:
 
 		/*
@@ -47,16 +47,5 @@ class ImageLoaderFactory
 		}
 };
 
-/* 
- * (1) Gets the instance of the Image Loader Factory
- * (2) Creates Image Loader with Image Loader Factory
- * (3) Loads image with Image Loader
- */
-inline std::shared_ptr<Image> LoadImage(const std::string& filename)
-{
-	auto imageLoader = (ImageLoaderFactory::getInstance()).getLoader(filename);
-	return imageLoader->load();
-}
-
-}};
+}}}
 #endif
