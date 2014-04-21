@@ -1,7 +1,7 @@
-#ifndef
-#define 
+#ifndef IO_H
+#define IO_H
 
-#include "Texture.h"
+#include "TextureManager.h"
 #include "ImageLoaderFactory.h"
 
 
@@ -24,8 +24,7 @@ inline std::shared_ptr<Image> LoadImage(const std::string& filename)
  */
 inline std::shared_ptr<Texture> LoadTexture(const std::string& filename)
 {
-	auto image = LoadImage(filename);	
-	return std::make_shared<Texture>(*image);
+	return (detail::TextureManager::getInstance).getTexture(filename);
 }
 
 }}
