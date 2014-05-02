@@ -1,6 +1,0 @@
-/*
-TODO:
-
-LoadImage in bgl:: UND  NICHT in bgl::io
-
-*/
