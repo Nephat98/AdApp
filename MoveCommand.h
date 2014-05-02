@@ -1,45 +1,57 @@
 
-namespace bgl {
 
-/*
- *
- */
-class Character
+class MoveCommand : public Command
 {
-	public:
-		//
-		typedef Level::Position Position;
-		typedef Position::Coordinate Coordinate;
-		
-		
 	private:
+		Policy policy;
+		
+	public:
+		virtual void start(int )
+		virtual void start(void)
+		setAnimation
+}
+
+class WalkCommand : public MoveCommand
+{
+	private:
+		determineDirection
+		
+		
+
+}
+
+
 	
-		/*
-		 * Führt Befehle aus
-		 */
-		void walkTo(Coordinate x)
+		
+		////////////////////////
+		class WalkCommand
 		{
-			// Checks if a current route to be cancelled exists
-			{
-				// Cancels current command
-			}
+			public:
 			
-			// Issues commands
-			
-			if(position.x == x)
+			void sas()
 			{
-				// does nothing
-			}
-			else // Walk Left oder right
-			{
-				// Computes Walking Time 
+				// Case 1: Change walk direction
+				if()
+				{
+					// TODO: Change walk direction
+				}
+				// Case 2: Change walk distance
+				else
+				{
+					
+				}
+
+				// Case: Weg verkürzt sich
+				// Case: Weg verlängert sich
+				// Case: Richtungswechsel
 				
-				// Starts animations
-				if(position.x > x)
-				else 
+				{
+					issueCommand()
+				}
 			}
-	
 		}
+		///////////////
+		
 
 	public:
 		/*
@@ -64,10 +76,7 @@ class Character
 		}
 		
 	
-	
-	
-	
-	
+
 	
 	
 	
